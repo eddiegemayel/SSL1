@@ -1,0 +1,93 @@
+body{
+	margin-left: 30%;
+	margin-right: 30%; 
+	background-image: url(../images/crossword.png);
+}
+
+h1{
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 15px;
+	font-family: 'Lily Script One', cursive;
+	color: #B8E356;
+}
+
+input{
+	width: 200px;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.txt{
+	margin: 0 10px 15px 0;
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+
+.btn {
+	-moz-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #b8e356), color-stop(1, #a5cc52) );
+	background:-moz-linear-gradient( center top, #b8e356 5%, #a5cc52 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b8e356', endColorstr='#a5cc52');
+	background-color:#b8e356;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:italic;
+	height:40px;
+	line-height:40px;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #86ae47;
+}
+.btn:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a5cc52), color-stop(1, #b8e356) );
+	background:-moz-linear-gradient( center top, #a5cc52 5%, #b8e356 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a5cc52', endColorstr='#b8e356');
+	background-color:#a5cc52;
+}.btn:active {
+	position:relative;
+	top:1px;
+}
+
+.labels{
+	float:left;
+	width:200px;
+	clear: both;
+	text-align: right;
+	/*padding-bottom: 5px;*/
+}
+.labels p, .inputs p{
+	margin: 0 10px 15px 0;
+	font-family: 'Alegreya Sans', sans-serif;
+
+}
+
+.inputs{
+	width:200px;
+	padding-bottom: 20px;
+	float: left;
+	clear: right;
+}

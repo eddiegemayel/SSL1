@@ -1,0 +1,7 @@
+hello
+blue
+apple
+orange
+yellow
+banana
+goodbye

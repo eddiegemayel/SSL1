@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lab 2</title>
+		<link rel="stylesheet" href="css/main.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Lily+Script+One|Elsie+Swash+Caps|Alegreya+Sans' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<h1>Lab Activity 2</h1>
+		<form method="POST" action="target.php" enctype="multipart/form-data">
+				<div class="labels">
+				<p>Username: </p>
+				<p>Password: </p>
+				<p>Upload a Profile Picture: </p>
+				<p></p>
+				<p>Enter Captcha: </p>
+				</div>
+
+				<div class="inputs">
+				<p><input type="text" name="username"/></p>
+				<p><input type="password" name="password"/></p>
+				<p><input type="file" name="filename"/></p>
+				<p>
+				<img src="captcha.php" />
+				<input type="text" name="captcha"/></p>
+				<p><input class="btn" type="submit" name="submit" value="Submit"/> </p>
+				</div>
+		</form>
+		
+	</body>
+</html>
