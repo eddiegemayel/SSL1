@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lab 4</title>
+		<script type="text/javascript">
+		function checkcity(cityentered){
+			var xmlhttp;
+			if(window.XMLHttpRequest){
+				xmlhttp = new XMLHttpRequest();
+			}
+
+			xmlhttp.onreadystatechange=function(){
+				if(xmlhttp.readyState==4 && xmlhttp.status==200){
+					document.getElementById("cityresponse").innerHTML=xmlhttp.responseText;
+				}
+			}
+			xmlhttp.open("GET", "cityresponse.php?cityget="+cityentered,true);
+			xmlhttp.send();
+		}
+
+		</script>
+	</head>
+	<body>
+		
+		<input type="text" name="city" id="city" placeholder="Enter City Name" onkeyup="checkcity(this.value)"/>
+		<div id="cityresponse"></div>
+		
+	</body>
+</html>

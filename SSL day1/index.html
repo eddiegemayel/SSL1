@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lab 1</title>
+		<link rel="stylesheet" href="css/main.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Fira+Mono' rel='stylesheet' type='text/css'/>
+	</head>
+	<body>
+		<h1>Enter your information</h1>
+		<form method="POST" action="action.php">
+			<div class="labels">
+				<p>First Name: </p>	
+				<p>Last Name: </p>	
+				<p>Address: </p>	
+				<p>City: </p>	
+				<p>State: </p>	
+				<p>Zip: </p>	
+				<p>Email: </p>	
+				<p>Phone: </p>	
+				<p>URL: </p>	
+			</div>
+
+			<div class="inputs">
+				<p><input type="text" name="f-name"/> </p>
+				<p><input type="text" name="l-name"/>	</p>
+				<p><input type="text" name="address"/> </p>
+				<p><input type="text" name="city"/> </p>
+				<p><input type="text" name="state" class="state"/> </p>
+				<p><input type="text" maxlength="5" name="zip" class="zip"/> </p>
+				<p><input type="email" name="email"/> </p>
+				<p><input type="text" name="phone"/> </p>
+				<p><input type="text" name="url"/> </p>
+				<p><input type="submit" name="submit" value="Submit"/> </p>
+			</div>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lab 3</title>
+		<link rel="stylesheet" href="css/main.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Domine|New+Rocker' rel='stylesheet' type='text/css'>	</head>
+	<body>
+		<h1>Sign Up</h1>
+		<h2>Already a member? <a href="login.html">Log in</a></h2>
+		<form method="POST" action="signup.php" enctype="multipart/form-data">
+				<div class="labels">
+				<p>Username: </p>
+				<p>Password: </p>
+				<p>Upload a Profile Picture: </p>
+				<p></p>
+				<p>Enter Captcha: </p>
+				</div>
+
+				<div class="inputs">
+				<p><input type="text" name="username"/></p>
+				<p><input type="password" name="password"/></p>
+				<p><input type="file" name="filename"/></p>
+				<p>
+				<img src="captcha.php" />
+				<input type="text" name="captcha"/></p>
+				<p><input class="btn" type="submit" name="submit" value="Submit"/> </p>
+				</div>
+		</form>
+		
+	</body>
+</html>
