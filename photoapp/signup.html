@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PhotoApp | Sign Up</title>
+		<link rel="stylesheet" href="css/main.css"/>
+	</head>
+	<body>
+		<header>
+			<h1><a href="index.php">PhotoApp</a></h1>
+			<a href="login.html">Log In</a>
+			<a href="signup.html">Sign Up</a>
+			<div class="hr">
+			<!-- <hr/> -->
+			</div>
+		</header>
+		<form method="POST" action="signup.php">
+				<p>Username </p>
+				<p><input type="text" name="username"/></p>
+				<p>Password </p>
+				<p><input type="password" name="password"/></p>
+				<p><img src="captcha.php" /></p>
+				<p>Enter Captcha </p>
+				<p><input type="text" name="captcha"/></p>
+				<button class="btn">Sign Up</button>
+		</form>
+	</body>
+</html>
