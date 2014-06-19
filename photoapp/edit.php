@@ -11,8 +11,12 @@ session_start();
     <body>        
         <header>
             <h1><a href="index.php">PhotoApp</a></h1>
-            <a href="login.html">Log In</a>
-            <a href="signup.html">Sign Up</a>
+            <a class="right" href="login.html">Log In</a>
+            <a class="right" href="signup.html">Sign Up</a>
+            <a href="profile.php">Back to Profile</a>
+            <form method="POST" action="logout.php">
+                <button class="btn">Log Out</button>
+            </form>
             <div class="hr">
             <!-- <hr/> -->
             </div>

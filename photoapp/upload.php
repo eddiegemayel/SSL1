@@ -1,8 +1,12 @@
 <?php
 	session_start();
-	// ob_start();
+	ob_start();
 	$uploaddir = "./uploads/";
 	$_SESSION["uploadfile"] = $uploaddir . basename($_FILES["filename"]["name"]);
+
+	$tags = explode(" ",$_POST["tags"]);
+
+
 
 
 	if(move_uploaded_file($_FILES["filename"]["tmp_name"], $_SESSION["uploadfile"])){
@@ -26,6 +30,11 @@
 
 			// var_dump($_SESSION["username"]);
 			//redirect them to login page
+
+			// foreach ($tags as $item) {
+   // 				 echo "<li>$item</li>";
+			// }
+			
 			header("Location: profile.php");
 		}
 

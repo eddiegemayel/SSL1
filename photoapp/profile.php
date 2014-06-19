@@ -16,9 +16,9 @@ echo '<html>
     <body>        
         <header>
             <h1><a href="index.php">PhotoApp</a></h1>
-            <a href="login.html">Log In</a>
-            <a href="signup.html">Sign Up</a>
-            <form method="POST" action="logout.php">
+            <a class="right" href="login.html">Log In</a>
+            <a class="right" href="signup.html">Sign Up</a>
+            <form class="right" method="POST" action="logout.php">
                 <button class="btn">Log Out</button>
             </form>
             <div class="hr">
@@ -27,15 +27,17 @@ echo '<html>
         </header>
         <div id="wrapper">
             <p> Welcome, <strong><em>'.$_SESSION['username'].'</em></strong>!</p>
-            <form method="POST" action="upload.php" enctype="multipart/form-data">
-                <p>Upload a Picture </p>
-                <p><input type="file" name="filename"/></p>
-                <p>Picture Title </p>
-                <p><input type="text" name="title"/></p>
-                <p>Tags</p>
-                <p><input type="text" name="tags"/></p>
-                <button class="btn">Submit</button>
-            </form>';
+            <form id="log" method="POST" action="upload.php" enctype="multipart/form-data">
+                <p class="form">Upload a Picture (300px By 300px)</p>
+                <p class="form"><input type="file" name="filename"/></p>
+                <p class="form">Picture Title </p>
+                <p class="form"><input type="text" name="title"/></p>
+                <p class="form">Tags (SEPERATE BY SPACES)</p>
+                <p class="form"><input type="text" name="tags"/></p>
+                <button class="btn form">Submit</button>
+            </form>
+            <h2>'.$_SESSION['username'].'&#39;s Photos</h2>'
+            ;
         
          //collect blogtable info from this specific user
         $user="root";
@@ -54,11 +56,11 @@ echo '<html>
         //loop through each blog post the user has (as shown in class)
         foreach($results  as $key){
          
-            echo '<div>'; 
-            echo '<h2>'.$key['photoName'].'</h2>';
+            echo '<div class="image">'; 
+            echo '<h3>'.$key['photoName'].'</h3>';
             echo '<p><a href="edit.php?photoId='.$key['id'].'">Edit</a> |';
             echo ' <a href="delete.php?photoId='.$key['id'].'">Delete</a></p>';
-            echo '<img src="'.$key['photoUrl'].'"/>';
+            echo '<img height="300px" width="300px" src="'.$key['photoUrl'].'"/>';
             echo '<p><strong>Uploaded By:</strong> '.$key['createdBy'].'</p>';
             echo '<p><strong>Tags:</strong> '.$key['tags'].'</p>';
             echo '</div>';
