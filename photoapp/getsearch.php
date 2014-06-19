@@ -1,4 +1,11 @@
 <?php
+/*
+Eddie Gemayel
+Lab 7
+individual challenge
+*/
+//start session and get search query
+
 	session_start();
 
 	$search = $_POST["search"];
@@ -27,19 +34,22 @@
 
 
 <?php
-
+			//connect to database
 			$user="root";
 			$pass="root";
 			$dbh = new PDO("mysql:host=localhost; dbname=Photo_db; port=8889;", $user,$pass);
+			//display anything that matches what user searched for.
+			//tags, photoname, username, whatever they searched for
 			$stmt = $dbh->prepare("SELECT * FROM photos WHERE (createdBy = :createdBy OR photoName = :name OR tags = :tags)");
 			$stmt->bindParam(":createdBy", $search, PDO::PARAM_STR);
 			$stmt->bindParam(":name",$search, PDO::PARAM_STR);
 			$stmt->bindParam(":tags",$search, PDO::PARAM_STR);
-
 			$stmt->execute();
 			$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			// var_dump($results);
 
+
+			//loop and display results
 			foreach($results  as $key){
 
             echo '<div class="image">'; 
@@ -52,3 +62,10 @@
         }
 			// OR photoName = :name
 ?> 
+<div>
+		<p class="center">Created by Eddie Gemayel | 
+		PhotoApp</p>
+	</div>
+	</body>
+	
+</html>

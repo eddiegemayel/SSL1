@@ -1,4 +1,10 @@
 <?php
+/*
+Eddie Gemayel
+Lab 7
+individual challenge
+*/
+//start session
 session_start();
 ?>
 
@@ -24,21 +30,20 @@ session_start();
 		<h2>Welcome! Here are some recent posts!</h2>
 		
 		<?php
-		 //collect blogtable info from this specific user
+		 //connect to database
         $user="root";
         $pass="root";
         $dbh=new PDO('mysql:host=localhost; dbname=Photo_db; port=8889;', $user, $pass);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);   
-        //select everything in the blog table where the user id equals the id of logged in user    
-        $stmt = $dbh ->prepare("SELECT * from photos LIMIT 6");
-       
+        //select all photos from table, limit six to display homepage    
+        $stmt = $dbh ->prepare("SELECT * from photos ORDER BY id DESC LIMIT 6");
         $stmt->execute();     
         //fetch all the results and put them into an associative arraay
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         //var_dump($results);
         
-        //loop through each blog post the user has (as shown in class)
+        //loop through each photo and display in its own div
         foreach($results  as $key){
          
             echo '<div class="image">'; 
@@ -51,6 +56,10 @@ session_start();
         }
         ?>
 		</div>
-		
+		<div>
+		<p class="center">Created by Eddie Gemayel | 
+		PhotoApp</p>
+	</div>
 	</body>
+	
 </html>

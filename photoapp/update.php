@@ -12,7 +12,7 @@ session_start();
 		$pass="root";
 		$dbh=new PDO('mysql:host=localhost; dbname=Photo_db; port=8889;', $user, $pass);
 		$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//sets the error mode to exceptions        
-		//update specific blogpost with unique id
+		//update photo title
 		$stmt = $dbh ->prepare("UPDATE photos SET photoName = :title WHERE id = :id");
 		//push new info entered by user
 		$stmt->bindParam(':title', $_POST["photoName"], PDO::PARAM_STR);

@@ -1,3 +1,10 @@
+/*
+Eddie Gemayel
+Lab 7
+individual challenge
+*/
+
+/*margin padding reset*/
 *{
 	margin: 0;
 	padding: 0;
@@ -55,6 +62,10 @@ input{
 	/*text-align:center;*/
 }
 
+/*footer{
+	margin-top: 7%;
+}*/
+
 #clear{
 	clear:none;
 }
@@ -63,6 +74,13 @@ input{
 	float:right;
 	clear:none;
 	margin-right: 2%;
+}
+
+.center{
+	text-align: center;
+	margin-top: 7%;
+	padding-top: 7%;
+	/*vertical-align: middle;*/
 }
 
 .form{
@@ -94,6 +112,9 @@ input{
 	clear:right;
 	margin-bottom: 1%;
 }
+
+
+/*ugly button styling code*/
 
 .btn {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;

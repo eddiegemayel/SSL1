@@ -39,13 +39,13 @@ echo '<html>
             <h2>'.$_SESSION['username'].'&#39;s Photos</h2>'
             ;
         
-         //collect blogtable info from this specific user
+         //connect to database
         $user="root";
         $pass="root";
         $dbh=new PDO('mysql:host=localhost; dbname=Photo_db; port=8889;', $user, $pass);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);   
-        //select everything in the blog table where the user id equals the id of logged in user    
-        $stmt = $dbh ->prepare("SELECT * from photos  WHERE createdBy = :username");
+        //select everything in the photo table where created by equals currently logged in user   
+        $stmt = $dbh ->prepare("SELECT * from photos  WHERE createdBy = :username ORDER BY id DESC");
         $stmt->bindParam(':username', $_SESSION["username"], PDO::PARAM_STR);
         $stmt->execute();     
         //fetch all the results and put them into an associative arraay
@@ -53,7 +53,7 @@ echo '<html>
 
         //var_dump($results);
         
-        //loop through each blog post the user has (as shown in class)
+        //loop and display
         foreach($results  as $key){
          
             echo '<div class="image">'; 
@@ -67,10 +67,12 @@ echo '<html>
          
         }
 
-
-        //echo closing tags   
-        echo '  
-        </div>
-         
-    </body>';
 ?>
+
+<div>
+        <p class="center">Created by Eddie Gemayel | 
+        PhotoApp</p>
+    </div>
+    </body>
+    
+</html>

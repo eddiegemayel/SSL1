@@ -7,6 +7,8 @@ individual challenge
 	session_start();
 	ob_start();
 
+
+	//collect user inputs
 	$newusername = $_POST["username"];
 	$newpassword = md5($_POST["password"]);
 	$_SESSION['thecap'] = $_POST["captcha"];
@@ -25,7 +27,7 @@ individual challenge
 			$stmt->execute();
 			$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-			//tell them it worked
+			//for developer
 			echo "<p>DONE!!</p>";
 
 			//redirect them to login page
@@ -45,7 +47,12 @@ individual challenge
 			<h1>PhotoApp</h1>
 		</header>
 		<p>Error - captcha wrong</p>
-				<a href='signup.html'>Go Back to Sign Up</a>
+		<a href='signup.html'>Go Back to Sign Up</a>
+			<div>
+		<p class="center">Created by Eddie Gemayel | 
+		PhotoApp</p>
+	</div>
+		
 	</body>
 </html>
 		";

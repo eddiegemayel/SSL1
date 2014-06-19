@@ -6,6 +6,7 @@ individual challenge
 */
 	session_start();
 
+	//collect login info
 	$username = $_POST['usernameLogin'];
 	$password = md5($_POST['passwordLogin']);
 	
@@ -38,6 +39,11 @@ individual challenge
 		</header>
 		<p>You are not in our database.</p>
 				<a href="login.html">Go Back to Log In</a>
+				<div>
+		<p class="center">Created by Eddie Gemayel | 
+		PhotoApp</p>
+	</div>
+
 	</body>
 </html>';
        	}
