@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>
+			Lab Six
+		</title>
+	</head>
+<body>
+	{{flash.info}} <br/>
+	<!-- Hello {{id}}! -->
+	<h1>Add a fruit</h1>
+	<form method="POST" action="">
+		<input type="text" name="fruitname" placeholder="Enter a fruit name"/>
+		<input type="text" name="fruitcolor" placeholder="Enter a fruit color"/>
+		<input type="submit" value="Submit"/>
+	</form>
+
+
+	<h2>Fruits in the database</h2>
+	{%for fruit in fruits%}
+		Fruit: {{fruit.name}} is {{fruit.color}} <br/>
+	{% endfor %}
+
+
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html class="no-js" lang= "en">
+<!-- head starts here  --> 
+	<head> 
+		<title>Edit</title>
+	</head>
+<!-- body starts here --> 
+	<body>		
+		<fieldset>
+			<legend>HELLO!</legend><br>
+				<form action="/update" method="POST">
+					<label for = "fruitname">Fruit: </label><input type="text" name = "fruitname" value="{{pagedata[0][0]}}"> <br>
+					<label for = "color">Color: </label><input type="text" name = "color" value="{{pagedata[0][1]}}"><br/>
+					<label for = "quant">Quant: </label><input type="text" name = "quant" value="{{pagedata[0][2]}}">
+					<p><input id="submit"  type = "submit" value ="UPDATE"/></p>
+				</form>		
+		</fielset>
+	</body>
+</html>	

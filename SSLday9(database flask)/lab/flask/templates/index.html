@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Index</title>
+	</head>
+	<body>
+		<fieldset>
+			<legend>In Stock Fruits</legend>
+			<a href="/addform">Add a fruit</a><br/>
+			<!-- {{pagedata}} <br/> -->
+			{% for item in pagedata%}
+				{{item[1]}} - {{item[2]}} - {{item[3]}} || <a href="/edititem?{{item[0]}}">Edit</a> / <a href='/delete?{{item[0]}} '>Delete</a><br/>
+			{%endfor%}
+		</fieldset>
+	</body>
+</html>
