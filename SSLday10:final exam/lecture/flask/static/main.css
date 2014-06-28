@@ -1,0 +1,13 @@
+h1, h2, h3, legend{
+	font-family: 'Oswald', sans-serif;
+}
+
+p, label, a{
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	background-image: url(stripes.png);
+	margin-right: 10%;
+	margin-left: 10%;
+}
